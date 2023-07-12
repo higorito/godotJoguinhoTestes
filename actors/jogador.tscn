@@ -1,0 +1,150 @@
+[gd_scene load_steps=19 format=3 uid="uid://bqabk23eqsrcb"]
+
+[ext_resource type="Script" path="res://scripts/jogador.gd" id="1_ebwcg"]
+[ext_resource type="Texture2D" uid="uid://cefwhe8sewip6" path="res://assets/Sprite Pack 5/2 - Lil Wiz/Idle_(32 x 32).png" id="2_dvq63"]
+[ext_resource type="Texture2D" uid="uid://cm8y1peheh63l" path="res://assets/Sprite Pack 5/2 - Lil Wiz/Running_(32 x 32).png" id="2_wjnep"]
+[ext_resource type="Texture2D" uid="uid://da3f7j2gmfr46" path="res://assets/Sprite Pack 5/2 - Lil Wiz/Jumping_(32 x 32).png" id="4_coo6c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rhnyi"]
+radius = 5.07296
+height = 20.2919
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3vf5"]
+atlas = ExtResource("2_wjnep")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yldag"]
+atlas = ExtResource("2_wjnep")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prijl"]
+atlas = ExtResource("2_wjnep")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h726p"]
+atlas = ExtResource("2_wjnep")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sow3k"]
+atlas = ExtResource("2_wjnep")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crki7"]
+atlas = ExtResource("2_wjnep")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3mtg"]
+atlas = ExtResource("2_dvq63")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md5qt"]
+atlas = ExtResource("2_dvq63")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v12al"]
+atlas = ExtResource("2_dvq63")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrkhx"]
+atlas = ExtResource("2_dvq63")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itdym"]
+atlas = ExtResource("2_dvq63")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1wu63"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3vf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yldag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prijl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h726p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sow3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crki7")
+}],
+"loop": true,
+"name": &"correr",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3mtg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md5qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v12al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrkhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itdym")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_coo6c")
+}],
+"loop": true,
+"name": &"pular",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6ooo"]
+size = Vector2(20, 22)
+
+[node name="jogador" type="CharacterBody2D"]
+collision_mask = 22
+script = ExtResource("1_ebwcg")
+
+[node name="colisor" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("CapsuleShape2D_rhnyi")
+
+[node name="animacao" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_1wu63")
+animation = &"correr"
+autoplay = "idle"
+
+[node name="animator" type="AnimationPlayer" parent="."]
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="dano" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_w6ooo")
+debug_color = Color(0.913725, 0.2, 0.541176, 0.419608)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[node name="direita" type="RayCast2D" parent="."]
+position = Vector2(4, -8)
+target_position = Vector2(7, 0)
+collision_mask = 4
+
+[node name="esquerda" type="RayCast2D" parent="."]
+position = Vector2(-4, -8)
+target_position = Vector2(-7, 0)
+collision_mask = 4
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

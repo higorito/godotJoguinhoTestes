@@ -1,0 +1,217 @@
+[gd_scene load_steps=13 format=3 uid="uid://r5hk7pqi4ott"]
+
+[ext_resource type="Texture2D" uid="uid://bsvlom4umbm5e" path="res://assets/Sprite Pack 5/8 - Orc/Walking_(64 x 32).png" id="1_b2wym"]
+[ext_resource type="Script" path="res://scripts/inimigo.gd" id="1_jue52"]
+[ext_resource type="Texture2D" uid="uid://cm6okroeusund" path="res://assets/Sprite Pack 5/8 - Orc/Hurt_(64 x 32).png" id="3_wmlps"]
+[ext_resource type="Texture2D" uid="uid://b3syinp2ui1vk" path="res://assets/Sprite Pack 5/8 - Orc/Blink_(Replace last frame on Walking)_(64 x 32).png" id="4_kbw81"]
+[ext_resource type="PackedScene" uid="uid://drus82g25m2hp" path="res://coisas/hitbox.tscn" id="5_5wyic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v880y"]
+size = Vector2(31, 25)
+
+[sub_resource type="Animation" id="Animation_x7b43"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_b2wym")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_6dsaq"]
+resource_name = "andar"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_b2wym")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 4]
+}
+
+[sub_resource type="Animation" id="Animation_qkeeo"]
+resource_name = "hurt"
+length = 0.1
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_wmlps")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_w1qt0"]
+resource_name = "idle"
+length = 0.1
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_kbw81")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mymtf"]
+_data = {
+"RESET": SubResource("Animation_x7b43"),
+"andar": SubResource("Animation_6dsaq"),
+"hurt": SubResource("Animation_qkeeo"),
+"idle": SubResource("Animation_w1qt0")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shv66"]
+size = Vector2(19.5, 2)
+
+[node name="inimigo" type="CharacterBody2D" groups=["inimigos"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_jue52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, -13.5)
+shape = SubResource("RectangleShape2D_v880y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_b2wym")
+hframes = 6
+
+[node name="animInimigo" type="AnimationPlayer" parent="."]
+autoplay = "andar"
+speed_scale = 0.5
+libraries = {
+"": SubResource("AnimationLibrary_mymtf")
+}
+
+[node name="detectarParede" type="RayCast2D" parent="."]
+position = Vector2(0, -13)
+target_position = Vector2(-20, 0)
+collision_mask = 6
+
+[node name="hitbox" parent="." instance=ExtResource("5_5wyic")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -28)
+shape = SubResource("RectangleShape2D_shv66")
+
+[connection signal="animation_finished" from="animInimigo" to="." method="_on_anim_inimigo_animation_finished"]
