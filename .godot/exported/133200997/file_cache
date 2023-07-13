@@ -1,0 +1,8 @@
+res://actors/inimigo.tscn::a393ef4d57660a2baef03e082b01c0e0::1689205784::res://.godot/exported/133200997/export-8aca955ae24199f3437b6ff1f44fac72-inimigo.scn
+res://actors/jogador.tscn::904e3583bca99e90e21126e5c602f8d8::1689209394::res://.godot/exported/133200997/export-dae4de20915410f487f00fa20f582c5a-jogador.scn
+res://coisas/hitbox.tscn::137665411fc734c19f39f7e6cb67362f::1689183435::res://.godot/exported/133200997/export-36b6d569b7583c86a72ee355aac900f1-hitbox.scn
+res://coisas/moedinha.tscn::26961b3f5c97c9de9ee39faf92f3ccb9::1689130563::res://.godot/exported/133200997/export-5d7214339eb9068c0e4e4b2f80291d8e-moedinha.scn
+res://coisas/plataforma_mover.tscn::c027dc9bef980f2b96ead3cf7e27bb37::1689130563::res://.godot/exported/133200997/export-07ba5922b91730b26fc61c94c2da6f48-plataforma_mover.scn
+res://niveis/mundo_1.tscn::f3d7fbcccd30aa27c4e02af4c71a8028::1689209394::res://.godot/exported/133200997/export-ea72ceb75b3f5a682c981c0bc1ab9178-mundo_1.scn
+res://coisas/box.tscn::976e5d88fd4e1df3fa6099a8ff5c9535::1689209394::res://.godot/exported/133200997/export-7b86d4577682783aff0ccb8e402829a2-box.scn
+res://coisas/pedacos.tscn::cd5d59f89daeea0d76b85d6be933bd7f::1689209394::res://.godot/exported/133200997/export-6d1d05338f477f42b34852323cebc5eb-pedacos.scn

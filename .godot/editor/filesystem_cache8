@@ -1,11 +1,14 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1689179744
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1689209385
+export_presets.cfg::TextFile::-1::1689201970::0::1::::<><>::
 icon.svg::CompressedTexture2D::4154723518020760588::1689107274::1689107291::1::::<><>::
-::res://actors/::1689186034
-inimigo.tscn::PackedScene::1255586256014843001::1689183435::0::1::::<><>::uid://bsvlom4umbm5e::::res://assets/Sprite Pack 5/8 - Orc/Walking_(64 x 32).png<>res://scripts/inimigo.gd<>uid://cm6okroeusund::::res://assets/Sprite Pack 5/8 - Orc/Hurt_(64 x 32).png<>uid://b3syinp2ui1vk::::res://assets/Sprite Pack 5/8 - Orc/Blink_(Replace last frame on Walking)_(64 x 32).png<>uid://drus82g25m2hp::::res://coisas/hitbox.tscn
-jogador.tscn::PackedScene::3509522218422262425::1689186034::0::1::::<><>::res://scripts/jogador.gd<>uid://cefwhe8sewip6::::res://assets/Sprite Pack 5/2 - Lil Wiz/Idle_(32 x 32).png<>uid://cm8y1peheh63l::::res://assets/Sprite Pack 5/2 - Lil Wiz/Running_(32 x 32).png<>uid://da3f7j2gmfr46::::res://assets/Sprite Pack 5/2 - Lil Wiz/Jumping_(32 x 32).png
-::res://assets/::1689185888
-::res://assets/botoes/::1689186123
+::res://actors/::1689209394
+inimigo.tscn::PackedScene::1255586256014843001::1689205784::0::1::::<><>::uid://bsvlom4umbm5e::::res://assets/Sprite Pack 5/8 - Orc/Walking_(64 x 32).png<>res://scripts/inimigo.gd<>uid://cm6okroeusund::::res://assets/Sprite Pack 5/8 - Orc/Hurt_(64 x 32).png<>uid://b3syinp2ui1vk::::res://assets/Sprite Pack 5/8 - Orc/Blink_(Replace last frame on Walking)_(64 x 32).png<>uid://drus82g25m2hp::::res://coisas/hitbox.tscn
+jogador.tscn::PackedScene::3509522218422262425::1689209394::0::1::::<><>::res://scripts/jogador.gd<>uid://cefwhe8sewip6::::res://assets/Sprite Pack 5/2 - Lil Wiz/Idle_(32 x 32).png<>uid://cm8y1peheh63l::::res://assets/Sprite Pack 5/2 - Lil Wiz/Running_(32 x 32).png<>uid://cg41vdvi0g6my::::res://assets/Sprite Pack 5/2 - Lil Wiz/Hurt_(32 x 32).png<>uid://da3f7j2gmfr46::::res://assets/Sprite Pack 5/2 - Lil Wiz/Jumping_(32 x 32).png
+::res://assets/::1689209501
+icons8-nintendo-gamecube-controller-96.png::CompressedTexture2D::8327695987641693947::1689188803::1689188858::1::::<><>::
+jogo-arcade.png::CompressedTexture2D::6940813173524615927::1689209482::1689209503::1::::<><>::
+::res://assets/botoes/::1689186125
 ui_buttons_arrow_left_NORMAL.png::CompressedTexture2D::3148846916479828520::1689185835::1689185891::1::::<><>::
 ui_buttons_arrow_left_PRESSED.png::CompressedTexture2D::8908439867275797567::1689185830::1689185891::1::::<><>::
 ui_buttons_arrow_right_NORMAL.png::CompressedTexture2D::4060333388735821485::1689185845::1689185891::1::::<><>::
@@ -150,18 +153,22 @@ Walking_(64 x 32).png::CompressedTexture2D::3693865366052367416::1689107789::168
 Death_(32 x 32).png::CompressedTexture2D::4977415750337586093::1689107789::1689108021::1::::<><>::
 Idle_Flicker_(32 x 32).png::CompressedTexture2D::8472172325384259361::1689107789::1689108021::1::::<><>::
 Weak_Flicker_(32 x 32).png::CompressedTexture2D::5744135276141351087::1689107789::1689108021::1::::<><>::
-::res://coisas/::1689183435
-moedinha.tscn::PackedScene::1218477479877644370::1689130563::0::1::::<><>::uid://b0j6ofudwuay0
-plataforma_mover.tscn::PackedScene::164784359651111768::1689130563::0::1::::<><>::uid://fyaptjmj6btt
+::res://coisas/::1689209394
+box.tscn::PackedScene::764791756834415511::1689209394::0::1::::<><>::uid://na2jsevfkekv::::res://assets/opp5_castle_tiles/environment/tiles/castle/tile_castle_grey.png
 hitbox.tscn::PackedScene::8394913213742337161::1689183435::0::1::::<><>::res://scripts/hitbox.gd
-::res://niveis/::1689186034
-mundo_1.tscn::PackedScene::4502354443320408092::1689186034::0::1::::<><>::uid://fyaptjmj6btt::::res://assets/Nature Platformer Tileset [16x16][FREE] - RottingPixels/nature-paltformer-tileset-16x16.png<>uid://cjl3jy0j5rlcp::::res://assets/opp5_castle_tiles/environment/tiles/castle/tile_castle.png<>res://scripts/mundo_1.gd<>uid://bqabk23eqsrcb::::res://actors/jogador.tscn<>uid://cwmxevs2iby7l::::res://assets/parallax_mountain_pack/layers/parallax-mountain-bg.png<>res://shaders/solNuvem.gdshader<>uid://cgactd7nn4rqp::::res://assets/parallax_mountain_pack/layers/parallax-mountain-foreground-trees.png<>uid://12wdf6cbe0qr::::res://assets/parallax_mountain_pack/layers/parallax-mountain-montain-far.png<>uid://bi0yp6gvjkpkx::::res://assets/parallax_mountain_pack/layers/parallax-mountain-mountains.png<>uid://b6lfbprf7sbca::::res://assets/parallax_mountain_pack/layers/parallax-mountain-trees.png<>uid://cl28ek817o4g::::res://coisas/plataforma_mover.tscn<>uid://rmie74habetu::::res://coisas/moedinha.tscn<>uid://r5hk7pqi4ott::::res://actors/inimigo.tscn<>uid://bk4lbwiu7sovw::::res://assets/botoes/ui_buttons_arrow_left_NORMAL.png<>uid://dy6kx50wae52r::::res://assets/botoes/ui_buttons_arrow_left_PRESSED.png<>uid://bx34dk6vek83b::::res://assets/botoes/ui_buttons_arrow_right_NORMAL.png<>uid://bglgwkof3sycd::::res://assets/botoes/ui_buttons_arrow_right_PRESSED.png
-::res://scripts/::1689185131
+moedinha.tscn::PackedScene::1218477479877644370::1689130563::0::1::::<><>::uid://b0j6ofudwuay0
+pedacos.tscn::PackedScene::5455455479924422732::1689209394::0::1::::<><>::res://scripts/pedacos.gd
+plataforma_mover.tscn::PackedScene::164784359651111768::1689130563::0::1::::<><>::uid://fyaptjmj6btt
+::res://niveis/::1689209394
+mundo_1.tscn::PackedScene::4502354443320408092::1689209394::0::1::::<><>::uid://fyaptjmj6btt::::res://assets/Nature Platformer Tileset [16x16][FREE] - RottingPixels/nature-paltformer-tileset-16x16.png<>uid://cjl3jy0j5rlcp::::res://assets/opp5_castle_tiles/environment/tiles/castle/tile_castle.png<>res://scripts/mundo_1.gd<>uid://bqabk23eqsrcb::::res://actors/jogador.tscn<>uid://cwmxevs2iby7l::::res://assets/parallax_mountain_pack/layers/parallax-mountain-bg.png<>res://shaders/solNuvem.gdshader<>uid://cgactd7nn4rqp::::res://assets/parallax_mountain_pack/layers/parallax-mountain-foreground-trees.png<>uid://12wdf6cbe0qr::::res://assets/parallax_mountain_pack/layers/parallax-mountain-montain-far.png<>uid://bi0yp6gvjkpkx::::res://assets/parallax_mountain_pack/layers/parallax-mountain-mountains.png<>uid://b6lfbprf7sbca::::res://assets/parallax_mountain_pack/layers/parallax-mountain-trees.png<>uid://cl28ek817o4g::::res://coisas/plataforma_mover.tscn<>uid://rmie74habetu::::res://coisas/moedinha.tscn<>uid://r5hk7pqi4ott::::res://actors/inimigo.tscn<>uid://bk4lbwiu7sovw::::res://assets/botoes/ui_buttons_arrow_left_NORMAL.png<>uid://dy6kx50wae52r::::res://assets/botoes/ui_buttons_arrow_left_PRESSED.png<>uid://bx34dk6vek83b::::res://assets/botoes/ui_buttons_arrow_right_NORMAL.png<>uid://bglgwkof3sycd::::res://assets/botoes/ui_buttons_arrow_right_PRESSED.png<>uid://cnfxhkmplp7on::::res://assets/botoes/ui_buttons_arrow_up_NORMAL.png<>uid://thjcmoaipwfl::::res://assets/botoes/ui_buttons_arrow_up_PRESSED.png<>uid://k5qaj28vsvs6::::res://coisas/box.tscn
+::res://scripts/::1689209245
+box.gd::GDScript::-1::1689209245::0::1::::<>CharacterBody2D<>::
+hitbox.gd::GDScript::-1::1689203652::0::1::::<>Area2D<>::
 inimigo.gd::GDScript::-1::1689182121::0::1::::<>CharacterBody2D<>::
-jogador.gd::GDScript::-1::1689185131::0::1::::<>CharacterBody2D<>::
+jogador.gd::GDScript::-1::1689209044::0::1::::<>CharacterBody2D<>::
 moedinhaScript.gd::GDScript::-1::1689130545::0::1::::<>Area2D<>::
-plataforma_mover.gd::GDScript::-1::1689129210::0::1::::<>Node2D<>::
-hitbox.gd::GDScript::-1::1689182073::0::1::::<>Area2D<>::
 mundo_1.gd::GDScript::-1::1689182780::0::1::::<>Node2D<>::
-::res://shaders/::1689186034
-solNuvem.gdshader::Shader::-1::1689186034::0::1::::<><>::
+pedacos.gd::GDScript::-1::1689209139::0::1::::<>RigidBody2D<>::
+plataforma_mover.gd::GDScript::-1::1689129210::0::1::::<>Node2D<>::
+::res://shaders/::1689209394
+solNuvem.gdshader::Shader::-1::1689209394::0::1::::<><>::

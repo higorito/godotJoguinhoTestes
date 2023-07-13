@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://r5hk7pqi4ott"]
+[gd_scene load_steps=14 format=3 uid="uid://r5hk7pqi4ott"]
 
 [ext_resource type="Texture2D" uid="uid://bsvlom4umbm5e" path="res://assets/Sprite Pack 5/8 - Orc/Walking_(64 x 32).png" id="1_b2wym"]
 [ext_resource type="Script" path="res://scripts/inimigo.gd" id="1_jue52"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://drus82g25m2hp" path="res://coisas/hitbox.tscn" id="5_5wyic"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v880y"]
-size = Vector2(31, 25)
+size = Vector2(28.5, 25)
 
 [sub_resource type="Animation" id="Animation_x7b43"]
 length = 0.001
@@ -180,7 +180,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shv66"]
-size = Vector2(19.5, 2)
+size = Vector2(20.6875, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u54kx"]
+size = Vector2(2.5, 26)
 
 [node name="inimigo" type="CharacterBody2D" groups=["inimigos"]]
 collision_layer = 4
@@ -188,7 +191,7 @@ collision_mask = 2
 script = ExtResource("1_jue52")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4.5, -13.5)
+position = Vector2(-4.75, -13)
 shape = SubResource("RectangleShape2D_v880y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -204,14 +207,18 @@ libraries = {
 }
 
 [node name="detectarParede" type="RayCast2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(0, -9)
 target_position = Vector2(-20, 0)
 collision_mask = 6
 
 [node name="hitbox" parent="." instance=ExtResource("5_5wyic")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, -28)
+position = Vector2(0, -27)
 shape = SubResource("RectangleShape2D_shv66")
+
+[node name="costas" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(10, -13)
+shape = SubResource("RectangleShape2D_u54kx")
 
 [connection signal="animation_finished" from="animInimigo" to="." method="_on_anim_inimigo_animation_finished"]

@@ -1,9 +1,5 @@
-res://actors/inimigo.tscn
+res://coisas/box.tscn
 res://shaders/solNuvem.gdshader
-res://scripts/inimigo.gd
 res://niveis/mundo_1.tscn
-res://coisas/hitbox.tscn
+res://coisas/pedacos.tscn
 res://actors/jogador.tscn
-res://scripts/hitbox.gd
-res://scripts/jogador.gd
-res://scripts/mundo_1.gd

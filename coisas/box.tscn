@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://k5qaj28vsvs6"]
+
+[ext_resource type="Texture2D" uid="uid://na2jsevfkekv" path="res://assets/opp5_castle_tiles/environment/tiles/castle/tile_castle_grey.png" id="1_i35tj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xjv7"]
+size = Vector2(29, 29)
+
+[sub_resource type="Animation" id="Animation_ksc05"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileCastleGrey:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TileCastleGrey:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.960784, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_a623e"]
+resource_name = "hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileCastleGrey:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TileCastleGrey:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.960784, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_22sq0"]
+_data = {
+"RESET": SubResource("Animation_ksc05"),
+"hit": SubResource("Animation_a623e")
+}
+
+[node name="box" type="CharacterBody2D"]
+collision_layer = 64
+collision_mask = 0
+
+[node name="TileCastleGrey" type="Sprite2D" parent="."]
+modulate = Color(0.960784, 0, 0, 1)
+texture = ExtResource("1_i35tj")
+region_enabled = true
+region_rect = Rect2(320, 448, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+light_mask = 64
+visibility_layer = 0
+shape = SubResource("RectangleShape2D_7xjv7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_22sq0")
+}
